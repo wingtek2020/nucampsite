@@ -1,22 +1,23 @@
-import { Container, Row, Col} from 'reactstrap';
+import { useState } from 'react';
+import { Container, Row, Col, Button} from 'reactstrap';
 import CampsiteDetail from '../features/campsites/CampsiteDetail';
 import CampsitesList from '../features/campsites/CampsitesList';
-import { selectCampsiteById } from '../features/campsites/campsitesSlice';
-import { useState } from 'react';
+import { selectRandomCampsite} from '../features/campsites/campsitesSlice';
 
 const CampsitesDirectoryPage = () => {
-
-    const [campsiteId] = useState(0);
-    const selectedCampsite = selectCampsiteById(campsiteId);
+    
+    const [selectedCampsite, toggleCampsite ] = useState(selectRandomCampsite());
 
     return (
         <Container>
+            <Button onClick={() => toggleCampsite(selectRandomCampsite)}>
+            </Button>
              <Row>
                 <Col sm='5' md='7'>
                     <CampsitesList></CampsitesList>
                 </Col>
                 <Col sm='7' md='5'>
-                    <CampsiteDetail campsite={selectedCampsite}></CampsiteDetail>
+                    <CampsiteDetail campsite={selectedCampsite} />
                 </Col>
             </Row>
         </Container>
