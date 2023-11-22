@@ -2,7 +2,7 @@ import { Col, Row, } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
 import { selectCampsiteById, selectAllCampsites } from './campsitesSlice';
 
-const CampsitesList = () => {
+const CampsiteList = () => {
     const campsites = selectAllCampsites();
 
     return (     
@@ -19,4 +19,4 @@ const CampsitesList = () => {
     );
 };
 
-export default CampsitesList;
+export default CampsiteList;
