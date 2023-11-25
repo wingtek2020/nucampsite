@@ -8,6 +8,7 @@ import ContactPage  from './pages/ContactPage';
 import HomePage  from './pages/HomePage';
 import CampsitesDirectoryPage  from './pages/CampsitesDirectoryPage';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='contact' element={<ContactPage />} />
-                <Route path='directory' element={<CampsitesDirectoryPage />} />
+                <Route path='directory' element={<CampsitesDirectoryPage />} />                
+                <Route path='about' element={<AboutPage />} />
                 <Route
                     path='directory/:campsiteId'
                     element={<CampsiteDetailPage />}
