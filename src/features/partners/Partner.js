@@ -3,9 +3,9 @@ const Partner = ({ partner }) => {
         const { image, name, description } = partner;
         return (
             <>
-            <img src={image} alt={name} style={{width: '150px'}}/>
-            <div>
-                <h5 className='fw-bold'>{name}</h5>
+            <img className="mr-2" src={image} alt={name} style={{width: '150px'}}/>
+            <div className="m-4">
+                <h5 className="fw-bold">{name}</h5>
                 {description}
             </div>
             </>
