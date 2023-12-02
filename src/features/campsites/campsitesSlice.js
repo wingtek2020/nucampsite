@@ -1,18 +1,17 @@
-import {CAMPSITES} from '../../app/shared/CAMPSITES';
+import { CAMPSITES } from "../../app/shared/CAMPSITES";
 
-export const selectAllCampsites = () =>
-{
-    return CAMPSITES;
-}
+export const selectAllCampsites = () => {
+  return CAMPSITES;
+};
 
 export const selectCampsiteById = (id) => {
-    return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
+  return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
 };
 
 export const selectRandomCampsite = () => {
-    return CAMPSITES[Math.floor(Math.random() * (CAMPSITES.length))];
-}
+  return CAMPSITES[Math.floor(Math.random() * CAMPSITES.length)];
+};
 
 export const selectFeaturedCampsite = () => {
-    return CAMPSITES.find((campsite) => campsite.featured);
+  return CAMPSITES.find((campsite) => campsite.featured);
 };
