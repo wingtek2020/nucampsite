@@ -36,7 +36,7 @@ export const CAMPSITES = [
         name: 'Redux Woods Campground',
         image: reduxWoodsImg,
         elevation: 42,
-        featured: false,
+        featured: true,
         description:
             "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
     }
