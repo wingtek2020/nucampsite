@@ -2,6 +2,8 @@ import { Col, Row } from "reactstrap";
 import { useSelector } from "react-redux";
 import { selectAllPartners } from "./partnersSlice";
 import Partner from "./Partner";
+import Error from "../../components/Error";
+import Loader from "../../components/Loading";
 
 const PartnersList = () => {
   const partners = useSelector(selectAllPartners);
@@ -9,9 +11,9 @@ const PartnersList = () => {
   const errMsg = useSelector((state) => state.partners.errMsg);
 
   return isLoading ? (
-    <h1> test </h1> 
+    <Loader type="Circles" color="#00BFFF" height={80} width={80} />
   ) : errMsg ? (
-    <h1>{errMsg}</h1> 
+    <Error errMsg={errMsg} />
   ) : (
     <Col className="mt-4">
       <Row>
