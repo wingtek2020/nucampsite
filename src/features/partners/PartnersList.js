@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectAllPartners } from "./partnersSlice";
 import Partner from "./Partner";
 import Error from "../../components/Error";
-import Loader from "../../components/Loading";
+import Loading from "../../components/Loading";
 
 const PartnersList = () => {
   const partners = useSelector(selectAllPartners);
@@ -11,7 +11,7 @@ const PartnersList = () => {
   const errMsg = useSelector((state) => state.partners.errMsg);
 
   return isLoading ? (
-    <Loader type="Circles" color="#00BFFF" height={80} width={80} />
+    <Loading></Loading>
   ) : errMsg ? (
     <Error errMsg={errMsg} />
   ) : (

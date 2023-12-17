@@ -14,6 +14,7 @@ import CampsitesDirectoryPage from "./pages/CampsitesDirectoryPage";
 import CampsiteDetailPage from "./pages/CampsiteDetailPage";
 import AboutPage from "./pages/AboutPage";
 import { fetchPromotions } from "./features/promotions/promotionsSlice";
+import { fetchComments } from "./features/comments/commentsSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,7 +22,8 @@ function App() {
   useEffect(() => {
     dispatch(fetchCampsites());
     dispatch(fetchPartners());
-    dispatch(fetchPromotions());
+    dispatch(fetchPromotions());    
+    dispatch(fetchComments());
   }, [dispatch]);
 
   return (
